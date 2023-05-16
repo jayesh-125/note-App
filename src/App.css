@@ -54,6 +54,8 @@
 }
 
 .sp{
+  text-overflow: clip;
+  max-width: 300px;
   font-size: large;
   width: fit-content;
   font-weight: 600;

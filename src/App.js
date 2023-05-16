@@ -1,26 +1,35 @@
 import "./App.css";
+import React, {useState} from 'react';
 function App() {
+  const [first, setfirst] = useState('');
+  const handle = (event)=>{
+    setfirst(event.target.value);
+  }
+  const store = ()=>{
+    localStorage.setItem("message",first)
+  }
+  
   return (
     <>
       <div className="main">
         <div className="message">
           <div className="sp">
-            <span> </span>
-            <i class="fa-solid fa-check"></i>
+            <span>{first}</span>
+            <i className="fa-solid fa-check"></i>
           </div>
           <div className="mas">
             <button className="mic">
-              <i class="fa-solid fa-microphone"></i>
+              <i className="fa-solid fa-microphone"></i>
             </button>
             <form action="">
               <input
                 type="text"
                 className="input_message"
                 placeholder="Enter message.."
-                name=""
-                id="im"
+                value={first}
+                onChange={handle}
               />
-              <button className="btn-md btn" type="submit">
+              <button className="btn-md btn" onClick={store}>
                 send
               </button>
             </form>
