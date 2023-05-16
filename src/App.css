@@ -1,38 +1,95 @@
-.App {
+.main{
+  background-color: antiquewhite;
+  max-width: 487px;
+  margin: 0 auto;
+}
+.row{
+  flex-direction: row-reverse;
+}
+.d-flex{
+  justify-content: space-between;
+  padding: 2px 10px;
+}
+.p1{
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(63, 19, 99);
+  text-decoration: underline;
+}
+.blue{
+  color: rgb(64, 121, 59);
+  font-size: 18px;
+  font-weight: 500;
+}
+.btn{
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: antiquewhite;
+  margin: 5px 5px 0 0;
+  border: none !important;
+  transition: all 500ms;
+  opacity: 0.6;
+}
+.btn:active{
+  opacity: 1 ;
+}
+.fa-solid{
+  color: rgb(63, 19, 99);
+  font-size: 18px;
+  padding: 5px;
+}.fa-check{
+  font-size: 12px !important;
+  color: rgb(224, 220, 219);
+}
+.message{
+  padding: 16px 0 0 8px;
+  background-color: rgba(254, 255, 254, 0.727);
+  height: 90vh;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.sp{
+  font-size: large;
+  width: fit-content;
+  font-weight: 600;
+  color: wheat;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: rgba(101, 52, 86, 0.904);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input_message{
+  border: 1px solid rgb(63, 19, 99);
+  border-radius: 50px;
+  padding:0.5rem 1rem;
+  background-color: rgba(37, 38, 37, 0.129) !important ;
+  font-weight: 500;
+  color: #40793b;
+  width: 85%;
+  margin-right: 1rem;
+}
+.mas{
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  top: 90%;
+  padding: 1%;
+}
+form{
+  display: flex;
+}
+.mic{
+  padding: .5rem 1rem;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: rgb(63, 19, 99) 1px solid;
+  border-radius: 50%;
 }
