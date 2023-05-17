@@ -46,52 +46,7 @@
   font-size: 12px !important;
   color: rgb(224, 220, 219);
 }
-.message{
-  padding: 16px 0 0 8px;
-  background-color: rgba(254, 255, 254, 0.727);
-  height: 90vh;
-  position: relative;
-}
 
-.sp{
-  text-overflow: clip;
-  max-width: 300px;
-  font-size: large;
-  width: fit-content;
-  font-weight: 600;
-  color: wheat;
-  padding: 5px 10px;
-  border-radius: 15px;
-  background-color: rgba(101, 52, 86, 0.904);
-}
-.input_message{
-  border: 1px solid rgb(63, 19, 99);
-  border-radius: 50px;
-  padding:0.5rem 1rem;
-  background-color: rgba(37, 38, 37, 0.129) !important ;
-  font-weight: 500;
-  color: #40793b;
-  width: 85%;
-  margin-right: 1rem;
-}
-.mas{
-  background-color: transparent;
-  display: flex;
+.w100{
   width: 100%;
-  justify-content: space-between;
-  position: absolute;
-  top: 90%;
-  padding: 1%;
-}
-form{
-  display: flex;
-}
-.mic{
-  padding: .5rem 1rem;
-  width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: rgb(63, 19, 99) 1px solid;
-  border-radius: 50%;
 }
