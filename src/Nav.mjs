@@ -1,24 +1,26 @@
-import "./App.css"
+import React from "react";
 const Navbar = () => {
-  
+  const data = [
+    {
+      id: 1,
+      name: "ram",
+    },
+    {
+      id: 2,
+      name: "ravan",
+    },
+  ];
+  let ind = 1;
+  let details = data[ind]
+  const handleClick = ()=>{
+    ind = ind +1;
+  }
+
   return (
-    <div className="d-flex">
-      <div className="logo">
-        <span className="p1">P</span>
-        <span className="blue">chat</span>
-      </div>
-      <div className="row">
-        <button className="btn">
-          <i className="fa-solid fa-user"></i>
-        </button>
-        <button className="btn">
-          <i className="fa-solid fa-bell"></i>
-        </button>
-        <button className="btn">
-          <i className="fa-solid fa-volume-xmark"></i>
-        </button>
-      </div>
-    </div>
+    <>
+      <span>{details.id}</span>
+      <p><b>{details.name}</b></p>
+      <button onClick={handleClick}>next</button>
+    </>
   );
 };
-export default Navbar;
