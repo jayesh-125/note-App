@@ -1,26 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import './App.css'
 const Navbar = () => {
-  const data = [
-    {
-      id: 1,
-      name: "ram",
-    },
-    {
-      id: 2,
-      name: "ravan",
-    },
-  ];
-  let ind = 1;
-  let details = data[ind]
-  const handleClick = ()=>{
-    ind = ind +1;
-  }
-
+  const[textBox,setTextBox] = useState('');
   return (
     <>
-      <span>{details.id}</span>
-      <p><b>{details.name}</b></p>
-      <button onClick={handleClick}>next</button>
+      <div className="d-flex">
+        <h2 className="h2">NoteApp</h2>
+        <button className="btn btn-sm" onClick={()=>{
+          setTextBox(true)
+        }}>Add Note</button>
+      </div>
+        <div className="d-flex flex-column">
+        {textBox && <textarea name="" id="" cols="40" rows="5"></textarea>}
+        <button className="my-3 col-3 btn offset-9">save</button>
+        </div>
     </>
   );
 };
+
+export default Navbar;
