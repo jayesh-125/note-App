@@ -1,5 +1,5 @@
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-family: Geneva, Verdana, serif !important;
     padding: 5px;
     color: white !important;
 }
@@ -9,4 +9,38 @@ body{
     padding: 5px;
     background-color: rgba(6, 3, 3, 0.895);
     margin: 0 auto;
+}
+.h2{
+    line-height: normal;
+    padding: 0 1rem;
+    font-weight: 800;
+    font-size: xx-large;
+    text-shadow: 2px 3px 10px green;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn{
+    margin: 0 5px;
+    padding: 5px;
+    box-shadow: green 2px 2px 5px;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    border: green;
+}
+.inp{
+    margin: 0 5px;
+    padding: 5px;
+    color: white;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid rgb(8, 73, 215);
+}
+.container{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
 }
