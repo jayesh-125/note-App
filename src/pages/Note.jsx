@@ -17,6 +17,9 @@ function Note() {
           
         </div>
       </section>
+      <section>
+        <button className="btn">Add Note</button>
+      </section>
     </div>
   )
 }
