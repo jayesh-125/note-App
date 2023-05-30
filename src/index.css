@@ -1,137 +1,153 @@
-body{
-    font-family: Geneva, Verdana, serif !important;
-    padding: 5px;
-    color: white !important;
+body {
+  font-family: Geneva, Verdana, serif !important;
+  margin: 0%;
+  border-radius: 5px;
+  color: white !important;
 }
-body>div{
-    position: relative;
-    
+body > div {
+  position: relative;
 }
-#root{
-    height: 100vh;
-    max-width: 500px;
-    padding: 5px;
-    background-color: rgba(6, 3, 3, 0.895);
-    margin: 0 auto;
+#root {
+  height: 100vh;
+  max-width: 992px;
+  padding: 5px;
+  background-color: rgba(6, 3, 3, 0.895);
+  margin: 0 auto;
 }
 
-.h2{
-    line-height: normal;
-    padding: 0 1rem;
-    font-weight: 800;
-    margin: 5px 0;
-    font-size: xx-large;
-    text-shadow: 2px 3px 10px green;
+.h2 {
+  line-height: normal;
+  padding: 0 1rem;
+  font-weight: 800;
+  margin: 5px 0;
+  font-size: xx-large;
+  text-shadow: 2px 3px 10px green;
 }
-.header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
-.btn{
-    margin: 0 5px;
-    padding: 5px;
-    box-shadow: green 2px 2px 5px;
-    color: white;
-    background-color: transparent;
-    border-radius: 5px;
-    border: green;
+.btn {
+  margin: 0 5px;
+  padding: 5px;
+  box-shadow: green 2px 2px 5px;
+  color: white;
+  background-color: transparent;
+  border-radius: 5px;
+  border: green;
 }
-.inp{
-    margin: 0 5px;
-    padding: 5px;
-    color: white;
-    background-color: transparent;
-    border-radius: 5px;
-    border: 1px solid rgb(8, 73, 215);
+.inp {
+  margin: 0 5px;
+  padding: 5px;
+  color: white;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid rgb(8, 73, 215);
 }
-.container{
-    padding: 10px;
-    border-radius: 5px;
-    width: auto;
-    height: 90vh !important;
-    overflow-y: scroll;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.container {
+  padding: 10px;
+  border-radius: 5px;
+  width: auto;
+  height: 90vh !important;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+.img-fluid {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 30%;
+  top: 35%;
 }
-.add__btn{
-    float: right;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: +1rem;
-    background-color: rgba(6, 3, 3, 0.895);
+@media screen and (min-width: 500px) {
+  .img-fluid {
+    width: 200px;
+    height: 200px;
+    left: 35%;
+    top: 40%;
+  }
 }
-.note__iteam{
-    width: 45%;
-    height: 49%;
-    overflow: auto;
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 110, 0.155);
-    border-radius: 10px;
+.add__btn {
+  float: right;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 4px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 5px rgba(68, 8, 75, 0.92);
+  background-color: rgba(6, 3, 3, 0.895);
 }
-@media screen and (max-width:380px) {
-    .note__iteam{
-        width: 80%;
-        margin: 5px auto;
-
-    }
+.note__iteam {
+  width: 45%;
+  height: 30%;
+  overflow: auto;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 110, 0.155);
+  border-radius: 10px;
 }
-p{
-    font-size: 12px;
-    line-height: normal;
-    text-align: justify;
-    margin: 0;
+@media screen and (max-width: 380px) {
+  .note__iteam {
+    width: 80%;
+    margin: 5px auto;
+  }
 }
-.h3{
-    margin: 0 0 6px 0;
-    font-size: 18px;
-    font-weight: 700;
-    font-family:sans-serif;
+p {
+  font-size: 12px;
+  line-height: normal;
+  text-align: justify;
+  margin: 0;
+}
+.h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: sans-serif;
 }
 /* create css */
-.create-btn{
-    padding:8px 16px;
-    margin: 5px;
-    background-color: rgba(37, 131, 21, 0.851);
-    border: 1px solid rgba(37, 131, 21, 0.851);
-    box-shadow: 1px 2px 5px rgba(37, 131, 21, 0.851);
-    font-weight: 500;
-    color: white;
-    border-radius: 5px;
-   
+.create-btn {
+  padding: 8px 16px;
+  margin: 5px;
+  background-color: rgba(37, 131, 21, 0.851);
+  border: 1px solid rgba(37, 131, 21, 0.851);
+  box-shadow: 1px 2px 5px rgba(37, 131, 21, 0.851);
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
 }
-.create_header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
+.create_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
 }
-button:hover{
-    opacity: 0.8;
+button:hover {
+  opacity: 0.8;
 }
-.w10{
-    width: 30px;
+.w10 {
+  width: 30px;
 }
-.create_inp,.create_textarea{
-    box-shadow: 1px 1px 2px plum;
-    border: 0;
-    background-color: transparent;
-    font-size: x-large;
-    color: white;
-    border-radius: 5px;
-    width: 88%;
-    margin: 10px 5%;
-    letter-spacing: 2px;
-    padding: 5px;
+.create_inp,
+.create_textarea {
+  box-shadow: 1px 1px 2px plum;
+  border: 0;
+  background-color: transparent;
+  font-size: x-large;
+  color: white;
+  border-radius: 5px;
+  width: 88%;
+  margin: 10px 5%;
+  letter-spacing: 2px;
+  padding: 5px;
 }
 /* edit note */
-.delete{
-    background-color: rgba(76, 21, 131, 0.851);
-    border: 1px solid rgba(76, 21, 131, 0.851);
-    box-shadow: 1px 2px 5px rgba(76, 21, 131, 0.851);
+.delete {
+  background-color: rgba(76, 21, 131, 0.851);
+  border: 1px solid rgba(76, 21, 131, 0.851);
+  box-shadow: 1px 2px 5px rgba(76, 21, 131, 0.851);
 }

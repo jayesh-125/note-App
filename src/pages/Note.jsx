@@ -1,30 +1,83 @@
-import React from 'react'
-import dummyNotes from '../dummyNotes'
-import NoteIteam from '../Comp/NoteIteam'
-function Note() {
+import React, { useEffect, useState } from "react";
+import NoteIteam from "../Comp/NoteIteam";
+import { Link } from "react-router-dom";
+import CIcon from "@coreui/icons-react";
+import { cilPlus, cilSearch, cilXCircle } from "@coreui/icons";
+import "../index.css";
+function Note({ notes }) {
+  const [showinp, setShowinp] = useState(false);
+  const [inp, setInp] = useState("");
+  const [filterNote, setFilterNote] = useState(notes);
+
+  const hdlSearch = () => {
+    setFilterNote(
+      notes.filter((note) => {
+        if (note.title.toLowerCase().match(inp.toLowerCase())) {
+          return note;
+        }
+      })
+    );
+  };
+  useEffect(hdlSearch, [inp]);
   return (
     <div>
       <section>
-        <header className='header'>
-          <h2 className='h2'>NOTE</h2>
+        <header className="header">
+          <h2 className="h2">NOTE</h2>
           <div>
-            {/* <input type="text" className='inp' autoFocus placeholder='keyword...' /> */}
-            <button className='btn'>search</button>
+            {showinp && (
+              <input
+                value={inp}
+                onChange={(e) => {
+                  setInp(e.target.value);
+                  hdlSearch();
+                }}
+                type="text"
+                className="inp"
+                autoFocus
+                placeholder="keyword..."
+              />
+            )}
+            <button
+              className="btn"
+              onClick={() => setShowinp((prevStste) => !prevStste)}
+            >
+              {showinp ? (
+                <CIcon
+                  icon={cilXCircle}
+                  style={{ color: "green", width: "20px" }}
+                  className="w10"
+                />
+              ) : (
+                <CIcon
+                  icon={cilSearch}
+                  style={{ color: "green", width: "20px" }}
+                  className="w10"
+                />
+              )}
+            </button>
           </div>
         </header>
       </section>
       <section>
         <div className="container">
+
           {
-            dummyNotes.map(note => <NoteIteam key={note.id} note = {note} />)
+            filterNote.length === 0 && <img src={require('../img-removebg-preview.png')} className="img-fluid" alt="img"/>
           }
+
+          {filterNote.map((note) => (
+            <NoteIteam key={note.id} note={note} />
+          ))}
         </div>
       </section>
       <section>
-        <button className="btn add__btn">Add Note</button>
+        <Link to={"./Add-note"}>
+          <CIcon icon={cilPlus} className="w10 add__btn" />
+        </Link>
       </section>
     </div>
-  )
+  );
 }
 
-export default Note
+export default Note;
